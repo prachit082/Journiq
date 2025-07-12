@@ -18,6 +18,10 @@ declare interface Country {
   coordinates: [number, number];
   value: string;
   openStreetMap?: string;
+  flag?: {
+    png?: string;
+    svg?: string;
+  };
 }
 
 declare interface DropdownItem {

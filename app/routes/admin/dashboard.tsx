@@ -1,6 +1,6 @@
 import { Header, StatsCard, TripCard } from "components";
 import { getUser } from "~/appwrite/auth";
-import { user, dashboardStats, allTrips } from "~/constants";
+import { dashboardStats, allTrips } from "~/constants";
 import type { Route } from "./+types/dashboard";
 
 export const clientLoader = async () => {
