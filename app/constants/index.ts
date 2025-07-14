@@ -4,19 +4,19 @@ import { formatDate } from "~/lib/utils";
 export const sidebarItems = [
   {
     id: 1,
-    icon: "/assets/icons/home.svg",
+    icon: "../../public/assets/icons/home.svg",
     label: "Dashboard",
     href: "/dashboard",
   },
   {
     id: 3,
-    icon: "/assets/icons/users.svg",
+    icon: "../../public/assets/icons/users.svg",
     label: "All Users",
     href: "/all-users",
   },
   {
     id: 4,
-    icon: "/assets/icons/itinerary.svg",
+    icon: "../../public/assets/icons/itinerary.svg",
     label: "AI Trips",
     href: "/trips",
   },
