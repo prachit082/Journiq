@@ -12,5 +12,6 @@ export default [
     ]),
     layout('routes/root/page-layout.tsx', [
         index('routes/root/travel-page.tsx'),
+        route('/travel/:tripId', 'routes/root/travel-detail.tsx'),
     ])
 ] satisfies RouteConfig;
