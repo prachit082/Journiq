@@ -7,7 +7,6 @@ export const appwriteConfig = {
     databaseId: import.meta.env.VITE_APPWRITE_DATABASE_ID,
     userCollectionId: import.meta.env.VITE_APPWRITE_USERS_COLLECTION_ID,
     tripCollectionId: import.meta.env.VITE_APPWRITE_TRIPS_COLLECTION_ID,
-    itineraryCollectionId: import.meta.env.VITE_APPWRITE_ITINERARY_COLLECTION_ID,
 }
 
 const client = new Client()
