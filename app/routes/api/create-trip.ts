@@ -1,4 +1,4 @@
-import {type ActionFunctionArgs, data} from "react-router";
+import {type ActionFunctionArgs} from "react-router";
 import {GoogleGenerativeAI} from "@google/generative-ai";
 import {parseMarkdownToJson} from "~/lib/utils";
 import {appwriteConfig, database} from "~/appwrite/client";
@@ -91,7 +91,11 @@ export const action = async ({ request }: ActionFunctionArgs) => {
             }
         )
 
-        return data({ id: result.$id })
+        return new Response(JSON.stringify({ id: result.$id }), {
+        status: 200,
+        headers: { "Content-Type": "application/json" },
+      });
+
     } catch (e) {
         console.error('Error generating travel plan: ', e);
     }

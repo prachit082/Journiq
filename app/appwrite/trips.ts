@@ -8,8 +8,6 @@ export const getAllTrips = async (limit: number, offset: number) => {
         [Query.limit(limit), Query.offset(offset), Query.orderDesc('createdAt')]
     )
 
-    console.log('All Trips:', allTrips);
-
     if(allTrips.total === 0) {
         console.error('No trips found');
         return { allTrips: [], total: 0 }
