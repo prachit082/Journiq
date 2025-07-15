@@ -76,9 +76,9 @@ export const loader = async ({ request }: LoaderFunctionArgs) => {
   ]);
 
   return {
-    trips: allTrips.map(({ $id, tripDetails, imageUrls }) => ({
+    trips: allTrips.map(({ $id, tripDetail, imageUrls }) => ({
       id: $id,
-      ...parseTripData(tripDetails),
+      ...parseTripData(tripDetail),
       imageUrls: imageUrls ?? [],
     })),
     total,
@@ -223,12 +223,12 @@ const TravelPage = ({ loaderData }: Route.ComponentProps) => {
               alt="logo"
               className="size-[30px]"
             />
-            <h1>Tourvisto</h1>
+            <h1>Journiq</h1>
           </Link>
 
           <div>
-            {["Terms & Conditions", "Privacy Policy"].map((item) => (
-              <Link to="/" key={item}>
+            {["© 2025 Prachit", "All Rights Reserved"].map((item) => (
+              <Link to="https://github.com/prachit082/Journiq" key={item}>
                 {item}
               </Link>
             ))}
